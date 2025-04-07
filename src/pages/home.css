@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+.epilogue-regular {
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.epilogue-semibold {
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.home {
+    background-color: #13221D;
+    color: white;
+    width: 100%;
+    min-height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.introduction {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.text {
+    padding-top: 2rem;
+    text-align: left;
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 1.25rem;
+}
+
+.connectButton {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.connectButton:hover {
+    background-color: #f0f0f0;
+}
+
+.work {
+    margin-top: 100px;
+}
+
+.work .row {
+    margin-top: 80px;
+}
+
+.left img,
+.right img {
+    width: 100%;
+    /* make image responsive */
+    display: block;
+    /* removes extra spacing below images */
+}
+
+.left p,
+.right p {
+    text-align: left;
+    margin: 0.5rem auto;
+    max-width: 90%;
+    /* Keep aligned with image size */
+}
+
+.left img,
+.right img {
+    width: 100%;
+    max-width: 90%;
+    /* Shrinks image inside its column */
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem;
+    /* Centers image inside column */
+}
+
+.project-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .text h1 {
+        font-size: 1.8rem;
+        width: 100%;
+    }
+
+    .text h4 {
+        font-size: 1.2rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    .connectButton {
+        display: block;
+        margin: 1rem auto 0;
+    }
+
+    .project-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
