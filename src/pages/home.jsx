@@ -2,6 +2,7 @@ import React from "react";
 import './home.css';
 
 import Header from '../components/Header';
+import FlipCardProject from "../components/FlipCardProject";
 
 
 function Home() {
@@ -27,33 +28,72 @@ function Home() {
             <div className="work">
                 <h2 className="epilogue-semibold">Latest Work</h2>
                 <div className="project-section px-3 px-md-5">
-                    <div className="row gx-2 gx-lg-4">
-                        <div className="col-lg-6 left">
-                            <img src="./p1.svg" alt="" />
-                            <p className="epilogue-semibold">Healing at Home: Enhancing Post-operative Care for Skin Cancer Patients</p>
-                            <p className="epilogue-regular">UI/UX</p>
-                        </div>
-                        <div className="col-lg-6 right">
-                            <img src="./p2.svg" alt="" />
-                            <p className="epilogue-semibold">BikeLinkPro, Designing the Future of E-Bikes</p>
-                            <p className="epilogue-regular">UI, Research</p>
-                        </div>
+                    <div className="projects-wrapper">
+                        <div className="row gx-4 gy-4 gx-lg-4">
+                            <FlipCardProject
+                                image="./p1.svg"
+                                title="Healing at Home: Enhancing Post-operative Care for Skin Cancer Patients"
+                                tags="UI/UX"
+                                summary="A mobile UI for skin cancer patients to monitor healing post-surgery using AI photo analysis."
+                                buttonText="View Case Study"
+                                buttonDisabled={false}
+                                buttonLink="https://example.com/case-study"
+                            />
+                            <FlipCardProject
+                                image="./p2.svg"
+                                title="BikeLinkPro, Designing the Future of E-Bikes"
+                                tags="UI, Research"
+                                summary="An e-bike dashboard UI designed through user research and usability testing."
+                                buttonText="View Case Study"
+                                buttonDisabled={false}
+                                buttonLink="https://example.com/case-study"
+                            />
+                            <FlipCardProject
+                                image="./p2.svg"
+                                title="BikeLinkPro, Designing the Future of E-Bikes"
+                                tags="UI, Research"
+                                summary="An e-bike dashboard UI designed through user research and usability testing."
+                                buttonText="View Case Study"
+                                buttonDisabled={false}
+                                buttonLink="https://example.com/case-study"
+                            />
 
+                        </div>
                     </div>
+
                 </div>
                 <div className="project-section px-3 px-md-5">
-                    <div className="row gx-2 gx-lg-4">
-                        <div className="col-lg-6 left">
-                            <img src="./p3.svg" alt="" />
-                            <p className="epilogue-semibold">"Time to Move!": Accessible Pressure Relief Reminders for Wheelchair Users</p>
-                            <p className="epilogue-regular">UI, Research</p>
-                        </div>
-                        <div className="col-lg-6 right">
-                            <img src="./p2.svg" alt="" />
-                            <p className="epilogue-semibold">BikeLinkPro, Designing the Future of E-Bikes</p>
-                            <p className="epilogue-regular">UI Art Direction</p>
-                        </div>
+                    <div className="projects-wrapper">
+                        <div className="row gx-4 gy-4 gx-lg-4">
+                            <FlipCardProject
+                                image="./p1.svg"
+                                title="Healing at Home: Enhancing Post-operative Care for Skin Cancer Patients"
+                                tags="UI/UX"
+                                summary="A mobile UI for skin cancer patients to monitor healing post-surgery using AI photo analysis."
+                                buttonText="View Case Study"
+                                buttonDisabled={false}
+                                buttonLink="https://example.com/case-study"
+                            />
+                            <FlipCardProject
+                                image="./p2.svg"
+                                title="BikeLinkPro, Designing the Future of E-Bikes"
+                                tags="UI, Research"
+                                summary="An e-bike dashboard UI designed through user research and usability testing."
+                                buttonText="View Case Study"
+                                buttonDisabled={false}
+                                buttonLink="https://example.com/case-study"
+                            />
+                            <FlipCardProject
+                                image="./p2.svg"
+                                title="BikeLinkPro, Designing the Future of E-Bikes"
+                                tags="UI, Research"
+                                summary="An e-bike dashboard UI designed through user research and usability testing."
+                                buttonText="View Case Study"
+                                buttonDisabled={false}
+                                buttonLink="https://example.com/case-study"
+                            />
 
+                        </div>
                     </div>
                 </div>
 
