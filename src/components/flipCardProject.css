@@ -54,6 +54,8 @@
     padding: 20px;
     color: #333;
     text-align: center;
+    box-sizing: border-box;
+    /* <-- ensures padding doesn't add overflow */
 }
 
 /* Text below card */
@@ -103,14 +105,24 @@
     /* 👈 Add space below the entire card block */
 }
 
+.flip-card-back p {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 @media (max-width: 600px) {
     .flip-card {
-        width: 90vw;
+        width: 80vw;
         /* Shrink width based on viewport */
         height: calc(90vw * 0.636);
         /* Maintain 550x350 aspect ratio */
         padding: 0 10px;
         /* Optional: just in case content inside needs space */
+    }
+
+    .flip-card-back {
+        padding: 16px 12px;
+        /* tighter but clean margins on mobile */
     }
 
     .project-text {

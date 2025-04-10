@@ -179,7 +179,21 @@
 }
 
 .principles {
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.principles h2 {
+    margin-bottom: 80px;
+}
+
+.reviews {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.reviews h2 {
+    margin-bottom: 80px;
 }
 
 @media (max-width: 768px) {

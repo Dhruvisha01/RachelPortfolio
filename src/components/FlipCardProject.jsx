@@ -12,7 +12,7 @@ const FlipCardProject = ({ image, title, tags, summary, buttonText,
     };
 
     return (
-        <div className="col-lg-4 d-flex justify-content-center">
+        <div className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
             <div className="project-card">
                 <div className="card-image-wrapper">
                     <div className="flip-card">
