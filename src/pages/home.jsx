@@ -96,10 +96,22 @@ function Home() {
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div className="principles">
+                <h2 className="epilogue-semibold">Design Principles</h2>
+                <div className="principles-wrapper px-3 px-md-5">
+                    <div className="projects-wrapper">
+                        <div className="row gx-4 gy-4 gx-lg-4">
+                            
+                        </div>
+                    </div>
 
+                </div>
 
             </div>
+
+
         </div>
     );
 }
