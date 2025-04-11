@@ -69,7 +69,7 @@ function Home() {
           <div className="projects-wrapper">
             <div className="row gx-4 gy-4 gx-lg-4">
               <FlipCardProject
-                image="./p1.svg"
+                image="./p4.svg"
                 title="Proofpoint"
                 tags="Wireframing, UX Research"
                 summary="In a world where digital threats are increasingly diverse and sophisticated, a very large percentage of cybersecurity incidents can be traced to human error. As a UX/UI designer at Proofpoint, I was assigned to the cybersecurity awareness team. Proofpoint’s flagship cybersecurity awareness product involves sending mock phishing emails to employees. When an employee falls for the mock attack, they are redirected to a “landing page”."
@@ -87,7 +87,7 @@ function Home() {
                 buttonLink="https://example.com/case-study"
               />
               <FlipCardProject
-                image="./p2.svg"
+                image="./p6.svg"
                 title="Redesigning ClientView, Allegheny County"
                 tags="UI, Research"
                 summary="An e-bike dashboard UI designed through user research and usability testing."
