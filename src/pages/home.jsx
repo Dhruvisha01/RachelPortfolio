@@ -3,6 +3,8 @@ import "./home.css";
 
 import Header from "../components/Header";
 import FlipCardProject from "../components/FlipCardProject";
+import PrinciplesCard from "../components/principlesCard";
+import ReviewCard from "../components/ReviewCard";
 
 function Home() {
   return (
@@ -39,7 +41,7 @@ function Home() {
                 image="./p1.svg"
                 title="VeyTel"
                 tags="UI/UX"
-                summary="Skin cancer is one of the most prevalent cancers globally. Early detection can significantly improve patient outcomes. As a UX/UI Design Consultant at VeyTel, I have been tasked with creating AI-powered interfaces for dermatologists to enhance their diagnostic processes, focusing in particular on tracking and analyzing skin lesions over time. Our goal is to leverage AI insights while ensuring that the final decisions remain with the healthcare providers."
+                summary="Skin cancer is one of the most prevalent cancers globally. Early detection can significantly improve patient outcomes. I have been tasked with creating AI-powered interfaces for dermatologists to enhance their diagnostic processes, focusing in particular on tracking and analyzing skin lesions over time. Our goal is to leverage AI insights while ensuring that the final decisions remain with the healthcare providers."
                 buttonText="Coming Soon!"
                 buttonDisabled={true}
                 buttonLink="https://example.com/case-study"
@@ -72,7 +74,7 @@ function Home() {
                 image="./p4.svg"
                 title="Proofpoint"
                 tags="Wireframing, UX Research"
-                summary="In a world where digital threats are increasingly diverse and sophisticated, a very large percentage of cybersecurity incidents can be traced to human error. As a UX/UI designer at Proofpoint, I was assigned to the cybersecurity awareness team. Proofpoint’s flagship cybersecurity awareness product involves sending mock phishing emails to employees. When an employee falls for the mock attack, they are redirected to a “landing page”."
+                summary="In a world where digital threats are increasingly diverse and sophisticated, a very large percentage of cybersecurity incidents can be traced to human error. I was assigned to the cybersecurity awareness team. Proofpoint’s flagship cybersecurity awareness product involves sending mock phishing emails to employees. When an employee falls for the mock attack, they are redirected to a “landing page”."
                 buttonText="View Case Study"
                 buttonDisabled={false}
                 buttonLink="https://example.com/case-study"
@@ -94,6 +96,53 @@ function Home() {
                 buttonText="Coming Soon!"
                 buttonDisabled={true}
                 buttonLink="https://example.com/case-study"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="principles">
+        <h2 className="epilogue-semibold">Design Principles</h2>
+        <div className="project-section px-3 px-md-5">
+          <div className="projects-wrapper">
+            <div className="row gx-4 gy-4 gx-lg-4">
+              <PrinciplesCard
+                image="./skills.svg"
+                title="Prioritizing the User"
+                summary="I foster a human-centric mindset, ensuring the team understands and prioritizes real people’s needs in design."
+              />
+              <PrinciplesCard
+                image="./accessibility.svg"
+                title="Accessibility"
+                summary="I advocate for inclusive standards and patterns, ensuring usability, comprehension, and empowerment through education."
+              />
+              <PrinciplesCard
+                image="./emplathy.svg"
+                title="Empathy"
+                summary="I engage with teams, stakeholders, and clients to understand their unique, diverse perspectives and integrate them into my designs."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="reviews">
+        <h2 className="epilogue-semibold">What people are saying</h2>
+        <div className="project-section px-3 px-md-5">
+          <div className="projects-wrapper">
+            <div className="row gx-4 gy-4 gx-lg-4">
+              <ReviewCard
+                image="./raelin.svg"
+                name="Raelin Sawka Musuraca"
+                title="Director, MHCI Program"
+                review='"As a former hiring manager, one of the most important skills for early career professionals is to proactively seek feedback and take immediate practical steps towards improvement. I witnessed Rachel embody this behavior over and over again during, and after, her completion of the MHCI program. Through course projects, internships, and contract work, Rachel continues to seek the experience needed to be successful as a researcher and designer."'
+              />
+              <ReviewCard
+                image="./lynn.svg"
+                name="Lynn Priestly"
+                title="Digital Designer & Accessible Design Educator"
+                review='"Rachel and I first met as peers in Pitt’s Digital Narrative and Interactive Design major. Collaborating with her in and out of the classroom has always been a pleasure. She’s intelligent, detail oriented, and delivers quality work. Her natural curiosity and thoughtful insights about user experience make her a phenomenal addition to any design team."'
               />
             </div>
           </div>

@@ -1,0 +1,28 @@
+.review-card {
+    background-color: white;
+    color: black;
+    padding: 50px;
+    width: 100%;
+    text-align: left;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-info p {
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.reviewer-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* 
+.reviewer-info {
+    display: block;
+} */
