@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
       {/* Navigation Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li className="epilogue-regular">About</li>
+          <li className="epilogue-regular"><Link to="/about">About</Link></li>
           <li className="epilogue-regular">Work</li>
           <li>
             <a
