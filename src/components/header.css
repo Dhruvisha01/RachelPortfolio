@@ -1,134 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
 
 .nunito-regular {
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .epilogue-regular {
-    font-family: "Epilogue", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Epilogue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 4rem;
-    position: relative;
-    /* Keep dropdown positioned relative to this */
-    z-index: 100;
-    flex-wrap: nowrap;
-    /* prevent wrapping */
-    background-color: #13221D;
-    color: white;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  position: relative;
+  /* Keep dropdown positioned relative to this */
+  z-index: 100;
+  flex-wrap: nowrap;
+  /* prevent wrapping */
+  background-color: #13221d;
+  color: white;
 }
 
 .logoName {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logoName img {
-    height: 60px;
-    /* Default size */
+  height: 60px;
+  /* Default size */
 }
 
 .name {
-    color: #508B8B;
-    font-size: 2rem;
+  color: #508b8b;
+  font-size: 2rem;
 }
 
 .links ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 1100;
-    /* So it’s clickable over other content */
-    transition: all 0.3s ease;
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1100;
+  /* So it’s clickable over other content */
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-    .header {
-        padding: 1rem;
-        ;
+  .header {
+    padding: 1rem;
+  }
+
+  .logoName img {
+    height: 40px;
+    /* Smaller logo on mobile */
+  }
+
+  .name {
+    font-size: 1.2rem;
+    /* Smaller text on mobile */
+  }
+
+  .links {
+    display: none;
+  }
+
+  .links.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    /* Right below the header */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out forwards;
+    color: #13221d;
+  }
+
+  .links ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    /* Allow dropdown to push things if needed */
+    position: relative;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
     }
 
-    .logoName img {
-        height: 40px;
-        /* Smaller logo on mobile */
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+}
 
-    .name {
-        font-size: 1.2rem;
-        /* Smaller text on mobile */
-    }
+/* general link styling */
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
 
-    .links {
-        display: none;
-    }
-
-    .links.open {
-        display: block;
-        position: absolute;
-        top: 100%;
-        /* Right below the header */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        padding: 1rem 2rem;
-        z-index: 1000;
-        animation: slideDown 0.3s ease-out forwards;
-        color: #13221D;
-    }
-
-    .links ul {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .header {
-        flex-wrap: wrap;
-        /* Allow dropdown to push things if needed */
-        position: relative;
-    }
-
-
-
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+a:hover {
+  text-decoration: underline !important;
+  font-weight: bold;
 }

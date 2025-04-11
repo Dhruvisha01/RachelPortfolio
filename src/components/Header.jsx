@@ -19,7 +19,15 @@ export default function Header() {
       {/* Navigation Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li className="epilogue-regular">About</li>
+          <li>
+            <a
+              href="/about"
+              aria-label="Open About Page"
+              className="epilogue-regular"
+            >
+              About
+            </a>
+          </li>
           <li className="epilogue-regular">Work</li>
           <li>
             <a
