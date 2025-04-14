@@ -1,0 +1,12 @@
+/* CustomCursor.css */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* shadow look */
+  pointer-events: none; /* let actual mouse events pass through */
+  transform: translate(-50%, -50%); /* center the circle on the pointer */
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+}

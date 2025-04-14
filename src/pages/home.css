@@ -193,6 +193,54 @@
   margin-bottom: 80px;
 }
 
+.awards {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.awards h2 {
+  margin-bottom: 80px;
+}
+
+.award-card h3 {
+  padding: 20px 10px;
+  font-size: 20px;
+}
+
+.companies {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.companies h2 {
+  margin-bottom: 80px;
+}
+
+.connect {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.connect h2 {
+  margin-bottom: 80px;
+}
+
+.connect .row {
+  text-align: left;
+}
+
+.connect-text {
+  padding-right: 80px !important;
+}
+
+.footer {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .text h1 {
     font-size: 1.8rem;

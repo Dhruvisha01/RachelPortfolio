@@ -1,0 +1,56 @@
+.about-page {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Epilogue", sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.about-page .sticky {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about-image {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about-text {
+    flex: 1;
+    padding-left: 40px;
+  }
+}

@@ -1,20 +1,34 @@
-import logo from './logo.svg';
-import { useEffect } from 'react';
-import './App.css';
+import logo from "./logo.svg";
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import Home from './pages/home';
-
+// import Header from "./components/Header";
+import Home from "./pages/home";
+import About from "./pages/about";
+/*import CustomCursorKinet from "./components/CustomCursorKinet";*/
+import CustomCursor from "./components/customCursor";
+import CustomCursorKinet from "./components/customCursorKinet";
 function App() {
   useEffect(() => {
-    fetch('http://localhost:5001/')
-      .then(res => res.text())
-      .then(data => console.log(data));
+    fetch("http://localhost:5001/")
+      .then((res) => res.text())
+      .then((data) => console.log(data));
   }, []);
 
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <div className="app">
+        {/* <CustomCursorKinet /> */}
+        {/* <CustomCursor /> */}
+        <CustomCursorKinet />
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

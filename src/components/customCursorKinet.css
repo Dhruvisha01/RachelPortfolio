@@ -1,0 +1,24 @@
+html,
+body {
+  /* perspective: 800px; */
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif;
+}
+
+.circle {
+  position: fixed; /* YES — fixed stays pinned to viewport */
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to top left, #0062be, #00a2fe);
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}

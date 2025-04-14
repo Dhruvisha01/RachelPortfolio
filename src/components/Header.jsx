@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 export default function Header() {
@@ -19,16 +20,14 @@ export default function Header() {
       {/* Navigation Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li>
-            <a
-              href="/about"
-              aria-label="Open About Page"
-              className="epilogue-regular"
-            >
-              About
+          <li className="epilogue-regular">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="epilogue-regular">
+            <a href="/#work" onClick={() => setMenuOpen(false)}>
+              Work
             </a>
           </li>
-          <li className="epilogue-regular">Work</li>
           <li>
             <a
               href="./UX Design Resume Portfolio.pdf"

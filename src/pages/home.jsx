@@ -32,7 +32,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="work">
+      <div className="work" id="work">
         <h2 className="epilogue-semibold">Latest Work</h2>
         <div className="project-section px-3 px-md-5">
           <div className="projects-wrapper">
@@ -53,7 +53,7 @@ function Home() {
                 summary="Working alongside University Hospitals of Cleveland, we are tackling the challenge of improving at-home patient-administered wound care, utilizing empathetic research, innovative ideation, while collaborating with healthcare professionals to develop tailored solutions aimed at enhancing patient outcomes and experiences in post-surgical wound care management."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://example.com/case-study"
+                buttonLink="https://medium.com/@rachsadeh/creating-better-at-home-wound-care-experiences-for-surgical-wounds-d65e7af03f7b"
               />
               <FlipCardProject
                 image="./p3.svg"
@@ -62,7 +62,7 @@ function Home() {
                 summary="I designed and prototyped a multi-modal notification system to remind wheelchair-bound users to perform pressure relief maneuvers. These maneuvers can help significantly reduce the chance of developing potentially life-threatening ulcers."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://example.com/case-study"
+                buttonLink="https://medium.com/@rachsadeh/time-to-move-accessible-pressure-relief-notifications-for-wheelchair-users-design-of-a-user-study-e93a3aa3b46b"
               />
             </div>
           </div>
@@ -86,7 +86,7 @@ function Home() {
                 summary="Imagine a world where your daily commute is effortless, eco-friendly, and intelligent. Welcome to BikeLinkPro, the e-bike of the future. Through a rigorous process of user feedback and rapid prototyping, we designed both physical and digital interfaces for semi-autonomous e-bikes, refining usability, safety, and functionality to redefine urban mobility."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://example.com/case-study"
+                buttonLink="https://medium.com/@rachsadeh/bikelinkpro-designing-the-future-of-e-bikes-454878311582"
               />
               <FlipCardProject
                 image="./p6.svg"
@@ -147,6 +147,106 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="awards">
+        <h2 className="epilogue-semibold">Awards and Press</h2>
+        <div className="project-section px-3 px-md-5">
+          <div className="projects-wrapper">
+            <div className="row gx-4 gy-4 gx-lg-4">
+              <div className="col-12 col-sm-6 col-lg-3">
+                <div className="award-card">
+                  <img src="./a1.svg" alt="Awards" />
+                  <h3 className="epilogue-semibold">SHE Innovates Hackathon</h3>
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-3">
+                <div className="award-card">
+                  <img src="./a2.svg" alt="Awards" />
+                  <h3 className="epilogue-semibold">
+                    Phi Eta Sigma Honors Society
+                  </h3>
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-3">
+                <div className="award-card">
+                  <img src="./a3.svg" alt="Awards" />
+                  <h3 className="epilogue-semibold">Pittsburgh Today Live</h3>
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-3">
+                <div className="award-card">
+                  <img src="./a4.svg" alt="Awards" />
+                  <h3 className="epilogue-semibold">Girls of Steel Awards</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="companies">
+        <h2 className="epilogue-semibold">Where I've worked</h2>
+        <div className="project-section px-3 px-md-5">
+          <div className="projects-wrapper">
+            <div className="row gx-4 gy-4 gx-lg-4">
+              <div className="col-12 col-sm-6 col-lg-2">
+                <div className="award-card">
+                  <img src="./c1.svg" alt="Awards" />
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-2">
+                <div className="award-card">
+                  <img src="./c2.svg" alt="Awards" />
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-2">
+                <div className="award-card">
+                  <img src="./c3.svg" alt="Awards" />
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-2">
+                <div className="award-card">
+                  <img src="./c4.svg" alt="Awards" />
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-2">
+                <div className="award-card">
+                  <img src="./c5.svg" alt="Awards" />
+                </div>
+              </div>
+              <div className="col-12 col-sm-6 col-lg-2">
+                <div className="award-card">
+                  <img src="./c6.svg" alt="Awards" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="connect">
+        <h2>Connect with me</h2>
+        <div className="project-section px-3 px-md-5">
+          <div className="projects-wrapper">
+            <div className="row gx-4 gy-4 gx-lg-4">
+              <div className="col-12 col-sm-12 col-lg-6 connect-text ">
+                <h3 className="epilogue-semibold">Let's work together!</h3>
+                <p className="epilogue-regular">
+                  I am currently based in Pittsburgh, PA and I am currently in
+                  search for a full-time position{" "}
+                </p>
+              </div>
+              <div className="col-12 col-sm-12 col-lg-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer">
+        <p className="epilogue-regular">
+          © 2024 Rachel Sadeh. All rights reserved
+        </p>
       </div>
     </div>
   );
