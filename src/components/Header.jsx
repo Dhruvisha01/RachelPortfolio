@@ -20,8 +20,14 @@ export default function Header() {
       {/* Navigation Links */}
       <div className={`links ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li className="epilogue-regular"><Link to="/about">About</Link></li>
-          <li className="epilogue-regular">Work</li>
+          <li className="epilogue-regular">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="epilogue-regular">
+            <a href="/#work" onClick={() => setMenuOpen(false)}>
+              Work
+            </a>
+          </li>
           <li>
             <a
               href="./UX Design Resume Portfolio.pdf"

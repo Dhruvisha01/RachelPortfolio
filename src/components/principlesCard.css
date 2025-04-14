@@ -1,55 +1,61 @@
 .project-card-principles {
-    background-color: white;
-    text-align: center;
-    width: 100%;
-    color: black;
-    padding: 0px 30px 60px 30px;
-    /* reduce horizontal padding */
-    box-sizing: border-box;
-    max-width: 350px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    margin: 10px;
-    /* optional: spacing between cards */
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  color: black;
+  padding: 0px 30px 60px 30px;
+  /* reduce horizontal padding */
+  box-sizing: border-box;
+  border-radius: 12px;
+  max-width: 350px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 10px;
+  /* optional: spacing between cards */
 }
 
 .principleLogo {
-    margin-top: 30px;
-    margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .principleLogo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .principleTitle,
 .principleSummary {
-    word-break: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .project-text-principles {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .principleSummary {
-    word-break: break-word;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
-    .project-card-principles {
-        padding: 0px 20px 40px 20px;
-    }
+  .project-card-principles {
+    padding: 0px 20px 40px 20px;
+  }
 }
 
 @media (max-width: 576px) {
-    .project-card-principles {
-        padding: 0px 15px 40px 15px;
-    }
+  .project-card-principles {
+    padding: 0px 15px 40px 15px;
+  }
+}
+
+.project-card-principles:hover {
+  background-color: yellow;
+  font-size: 18px;
 }
