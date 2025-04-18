@@ -11,7 +11,7 @@ import CustomCursor from "./components/customCursor";
 import CustomCursorKinet from "./components/customCursorKinet";
 function App() {
   useEffect(() => {
-    fetch("http://localhost:5001/")
+    fetch("https://rachelportfoliobackend.onrender.com/")
       .then((res) => res.text())
       .then((data) => console.log(data));
   }, []);
