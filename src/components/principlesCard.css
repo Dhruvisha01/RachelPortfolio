@@ -55,7 +55,21 @@
   }
 }
 
+.project-card-principles {
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  color: black;
+  padding: 0px 30px 60px 30px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  max-width: 350px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
 .project-card-principles:hover {
-  background-color: yellow;
-  font-size: 18px;
+  transform: scale(1.05);
 }
