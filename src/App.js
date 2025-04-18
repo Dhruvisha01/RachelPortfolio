@@ -21,7 +21,7 @@ function App() {
       <div className="app">
         {/* <CustomCursorKinet /> */}
         {/* <CustomCursor /> */}
-        <CustomCursorKinet />
+        {/* <CustomCursorKinet /> */}
         {/* <Header /> */}
         <Routes>
           <Route path="/" element={<Home />} />

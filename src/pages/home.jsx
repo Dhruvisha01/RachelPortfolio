@@ -212,81 +212,81 @@ function Home() {
         </div>
       </div>
 
-      <div className="awards">
-        <h2 className="epilogue-semibold">Awards and Press</h2>
-        <div className="project-section px-3 px-md-5">
-          <div className="projects-wrapper">
-            <div className="row gx-4 gy-4 gx-lg-4">
-              <div className="col-12 col-sm-6 col-lg-3">
-                <div className="award-card">
-                  <img src="./a1.svg" alt="Awards" />
-                  <h3 className="epilogue-semibold">SHE Innovates Hackathon</h3>
+            <div className="awards">
+                <h2 className="epilogue-semibold">Awards and Press</h2>
+                <div className="project-section px-3 px-md-5">
+                    <div className="projects-wrapper">
+                        <div className="row g-4">
+                            <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                <div className="award-card">
+                                    <img src="./a1.svg" alt="Awards" />
+                                    <h3 className="epilogue-semibold">SHE Innovates Hackathon</h3>
+                                </div>
+                            </div>
+                            <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                <div className="award-card">
+                                    <img src="./a2.svg" alt="Awards" />
+                                    <h3 className="epilogue-semibold">
+                                        Phi Eta Sigma Honors Society
+                                    </h3>
+                                </div>
+                            </div>
+                            <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                <div className="award-card">
+                                    <img src="./a3.svg" alt="Awards" />
+                                    <h3 className="epilogue-semibold">Pittsburgh Today Live</h3>
+                                </div>
+                            </div>
+                            <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                                <div className="award-card">
+                                    <img src="./a4.svg" alt="Awards" />
+                                    <h3 className="epilogue-semibold">Girls of Steel Awards</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-3">
-                <div className="award-card">
-                  <img src="./a2.svg" alt="Awards" />
-                  <h3 className="epilogue-semibold">
-                    Phi Eta Sigma Honors Society
-                  </h3>
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-3">
-                <div className="award-card">
-                  <img src="./a3.svg" alt="Awards" />
-                  <h3 className="epilogue-semibold">Pittsburgh Today Live</h3>
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-3">
-                <div className="award-card">
-                  <img src="./a4.svg" alt="Awards" />
-                  <h3 className="epilogue-semibold">Girls of Steel Awards</h3>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="companies">
-        <h2 className="epilogue-semibold">Where I've worked</h2>
-        <div className="project-section px-3 px-md-5">
-          <div className="projects-wrapper">
-            <div className="row gx-4 gy-4 gx-lg-4">
-              <div className="col-12 col-sm-6 col-lg-2">
-                <div className="award-card">
-                  <img src="./c1.svg" alt="Awards" />
+            <div className="companies">
+                <h2 className="epilogue-semibold">Where I've worked</h2>
+                <div className="project-section px-3 px-md-5">
+                    <div className="projects-wrapper">
+                        <div className="row row-cols-2 row-cols-lg-6 gx-4 gy-4 gx-lg-4">
+                            <div className="col">
+                                <div className="award-card">
+                                    <img src="./c1.svg" alt="Awards" />
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="award-card">
+                                    <img src="./c2.svg" alt="Awards" />
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="award-card">
+                                    <img src="./c3.svg" alt="Awards" />
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="award-card">
+                                    <img src="./c4.svg" alt="Awards" />
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="award-card">
+                                    <img src="./c5.svg" alt="Awards" />
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="award-card">
+                                    <img src="./c6.svg" alt="Awards" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-2">
-                <div className="award-card">
-                  <img src="./c2.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-2">
-                <div className="award-card">
-                  <img src="./c3.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-2">
-                <div className="award-card">
-                  <img src="./c4.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-2">
-                <div className="award-card">
-                  <img src="./c5.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col-12 col-sm-6 col-lg-2">
-                <div className="award-card">
-                  <img src="./c6.svg" alt="Awards" />
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
       <div className="connect" id="connect">
         <h2>Connect with me</h2>
