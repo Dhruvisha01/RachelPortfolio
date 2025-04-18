@@ -6,6 +6,10 @@ html {
   text-align: center;
 }
 
+/* .app {
+  perspective: 800px;
+} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

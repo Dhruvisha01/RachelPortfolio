@@ -7,10 +7,12 @@ export default function Header() {
 
   return (
     <div className="header">
-      <div className="logoName">
-        <img src="./logo.svg" alt="Rachel Sadeh logo" />
-        <h1 className="nunito-regular name">Rachel Sadeh</h1>
-      </div>
+      <a href="/">
+        <div className="logoName">
+          <img src="./logo.svg" alt="Rachel Sadeh logo" />
+          <h1 className="nunito-regular name">Rachel Sadeh</h1>
+        </div>
+      </a>
 
       {/* Hamburger icon */}
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

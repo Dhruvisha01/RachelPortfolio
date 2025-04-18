@@ -1,28 +1,25 @@
 .review-card {
-    background-color: white;
-    color: black;
-    padding: 50px;
-    width: 100%;
-    text-align: left;
+  background-color: white;
+  color: black;
+  padding: 50px;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 
 .reviewer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .reviewer-info p {
-    margin-bottom: 0px;
-    margin-left: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
 }
 
 .reviewer-image img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
-
-/* 
-.reviewer-info {
-    display: block;
-} */
