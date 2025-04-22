@@ -67,6 +67,7 @@
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch
 }
 
 /* Text below card */

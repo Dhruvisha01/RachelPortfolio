@@ -22,8 +22,29 @@ const FlipCardProject = ({ image, title, tags, summary, buttonText,
             el.scrollTop += e.deltaY; // Manually scroll the card
         };
 
+        let startY;
+        let scrollTop;
+
+        const onTouchStart = (e) => {
+            startY = e.touches[0].clientY;
+            scrollTop = el.scrollTop;
+        };
+
+        const onTouchMove = (e) => {
+            e.preventDefault(); // Prevent page scroll
+            const dy = e.touches[0].clientY - startY;
+            el.scrollTop = scrollTop - dy;
+        };
+
         el.addEventListener('wheel', onWheel, { passive: false });
-        return () => el.removeEventListener('wheel', onWheel);
+        el.addEventListener('touchstart', onTouchStart, { passive: false });
+        el.addEventListener('touchmove', onTouchMove, { passive: false });
+
+        return () => {
+            el.removeEventListener('wheel', onWheel);
+            el.removeEventListener('touchstart', onTouchStart);
+            el.removeEventListener('touchmove', onTouchMove);
+        };
     }, []);
     return (
         <div className="col-12 col-lg-4 d-flex justify-content-center">
