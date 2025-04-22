@@ -56,9 +56,9 @@ function Home() {
                 </div>
             )}
 
-            <div className="introduction container">
-                <div className="row">
-                    <div className="col-lg-6 text mt-4 mt-lg-0 px-4 px-lg-0 text-center text-lg-start">
+            <div className="introduction container py-5">
+                <div className="row align-items-center">
+                    <div className="col-12 col-lg-6 text-center text-lg-start mb-4 mb-lg-0 px-4">
                         <h4 className="epilogue-semibold">
                             Human First Approach | Innovative Thinking
                         </h4>
@@ -77,8 +77,8 @@ function Home() {
                             </a>
                         </button>
                     </div>
-                    <div className="col-lg-6 image mt-4 mt-lg-0 px-4 px-lg-0">
-                        <img src="./hero.svg" alt="hero-img" />
+                    <div className="col-12 col-lg-6 text-center px-4">
+                        <img src="./hero.svg" alt="hero-img" className="img-fluid" />
                     </div>
                 </div>
             </div>
