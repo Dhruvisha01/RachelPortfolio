@@ -10,10 +10,14 @@ import About from "./pages/about";
 import CustomCursor from "./components/customCursor";
 import CustomCursorKinet from "./components/customCursorKinet";
 function App() {
+  const [showCustomCursor, setShowCustomCursor] = useState(false);
   useEffect(() => {
     fetch("https://rachelportfoliobackend.onrender.com/")
       .then((res) => res.text())
       .then((data) => console.log(data));
+
+    const isMouseDevice = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    setShowCustomCursor(isMouseDevice);
   }, []);
 
   return (
@@ -21,7 +25,7 @@ function App() {
       <div className="app">
         {/* <CustomCursorKinet /> */}
         {/* <CustomCursor /> */}
-        <CustomCursorKinet />
+        {showCustomCursor && <CustomCursorKinet />}
         {/* <Header /> */}
         <Routes>
           <Route path="/" element={<Home />} />
