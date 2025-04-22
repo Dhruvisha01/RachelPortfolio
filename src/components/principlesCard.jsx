@@ -3,26 +3,49 @@ import "./principlesCard.css";
 
 const PrinciplesCard = ({ iconSet = [], title, summary }) => {
   const [iconIndex, setIconIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  // const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    if (iconSet.length > 1) {
-      const interval = setInterval(() => {
-        setIconIndex((prevIndex) => (prevIndex + 1) % iconSet.length);
-      }, 1000); // change every second
+    // Preload all images before rendering
+    const loadImages = async () => {
+      const promises = iconSet.map(
+        (src) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+          })
+      );
+      await Promise.all(promises);
+      setImagesLoaded(true);
+    };
 
-      return () => clearInterval(interval); // cleanup
-    }
+    loadImages();
   }, [iconSet]);
+
+  useEffect(() => {
+    if (imagesLoaded && iconSet.length > 1) {
+      const interval = setInterval(() => {
+        setIconIndex((prev) => (prev + 1) % iconSet.length);
+      }, 2000);
+
+      return () => clearInterval(interval);
+    }
+  }, [imagesLoaded, iconSet]);
+
+  if (!imagesLoaded) {
+    return <div className="loading-placeholder"></div>; // Or your shimmer/loading
+  }
 
   return (
     <div className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
       <div className="project-card-principles">
-        <div className="principleLogo">
+        <div className="principleLogo image-container">
           <img
-            key={iconSet[iconIndex]} // ensures animation is re-triggered
-            src={iconSet[iconIndex] || iconSet[0]}
-            alt={`${title} icon`}
-            className="fade-image"
+            src={iconSet[iconIndex]}
+            alt={title}
+            className="fade-image-stable"
           />
         </div>
         <div className="project-text-principles">
