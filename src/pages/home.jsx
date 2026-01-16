@@ -109,7 +109,7 @@ function Home() {
                 summary="Working alongside University Hospitals of Cleveland, we are tackling the challenge of improving at-home patient-administered wound care, utilizing empathetic research, innovative ideation, while collaborating with healthcare professionals to develop tailored solutions aimed at enhancing patient outcomes and experiences in post-surgical wound care management."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://medium.com/@rachsadeh/creating-better-at-home-wound-care-experiences-for-surgical-wounds-d65e7af03f7b"
+                buttonLink="/case-studies/uhc"
               />
               <FlipCardProject
                 image="./p3.svg"
@@ -118,7 +118,7 @@ function Home() {
                 summary="I designed and prototyped a multi-modal notification system to remind wheelchair-bound users to perform pressure relief maneuvers. These maneuvers can help significantly reduce the chance of developing potentially life-threatening ulcers."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://medium.com/@rachsadeh/time-to-move-accessible-pressure-relief-notifications-for-wheelchair-users-design-of-a-user-study-e93a3aa3b46b"
+                buttonLink="/case-studies/time-to-move"
               />
             </div>
           </div>
@@ -130,10 +130,10 @@ function Home() {
                 image="./p4.svg"
                 title="Proofpoint"
                 tags="Wireframing, UX Research"
-                summary="In a world where digital threats are increasingly diverse and sophisticated, a very large percentage of cybersecurity incidents can be traced to human error. I was assigned to the cybersecurity awareness team. Proofpoint’s flagship cybersecurity awareness product involves sending mock phishing emails to employees. When an employee falls for the mock attack, they are redirected to a “landing page”."
+                summary="In a world where digital threats are increasingly diverse and sophisticated, a very large percentage of cybersecurity incidents can be traced to human error. I was assigned to the cybersecurity awareness team. Proofpoint's flagship cybersecurity awareness product involves sending mock phishing emails to employees. When an employee falls for the mock attack, they are redirected to a &quot;landing page&quot;."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://example.com/case-study"
+                buttonLink="/case-studies/proofpoint"
               />
               <FlipCardProject
                 image="./p5.svg"
@@ -142,16 +142,16 @@ function Home() {
                 summary="Imagine a world where your daily commute is effortless, eco-friendly, and intelligent. Welcome to BikeLinkPro, the e-bike of the future. Through a rigorous process of user feedback and rapid prototyping, we designed both physical and digital interfaces for semi-autonomous e-bikes, refining usability, safety, and functionality to redefine urban mobility."
                 buttonText="View Case Study"
                 buttonDisabled={false}
-                buttonLink="https://medium.com/@rachsadeh/bikelinkpro-designing-the-future-of-e-bikes-454878311582"
+                buttonLink="/case-studies/bikelinkpro"
               />
               <FlipCardProject
                 image="./p6.svg"
                 title="Redesigning ClientView, Allegheny County"
                 tags="UI, Research"
                 summary="ClientView is a platform used by frontline caseworkers to access behavioral health, housing, and service history data. I am leading the redesign of the system to streamline complex workflows and make critical information easier to find and act on. By collaborating closely with caseworkers and internal teams, I aim to reduce cognitive load, improve data clarity, and support faster, more informed decision-making in high-stakes social service environments."
-                buttonText="Coming Soon!"
-                buttonDisabled={true}
-                buttonLink="https://example.com/case-study"
+                buttonText="View Case Study"
+                buttonDisabled={false}
+                buttonLink="/case-studies/clientview"
               />
             </div>
           </div>
@@ -219,34 +219,62 @@ function Home() {
 
       <div className="awards">
         <h2 className="epilogue-semibold">Awards and Press</h2>
+
         <div className="project-section px-3 px-md-5">
           <div className="projects-wrapper">
             <div className="row g-4">
+              {/* SHE Innovates */}
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                <div className="award-card">
-                  <img src="./a1.svg" alt="Awards" />
+                <a
+                  href="https://www.youtube.com/watch?v=SLshoOZGg7E&list=LL&index=43"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="award-card"
+                >
+                  <img src="./a1.svg" alt="SHE Innovates Hackathon Award" />
                   <h3 className="epilogue-semibold">SHE Innovates Hackathon</h3>
-                </div>
+                </a>
               </div>
+
+              {/* Phi Eta Sigma */}
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                <div className="award-card">
-                  <img src="./a2.svg" alt="Awards" />
+                <a
+                  href="https://phietasi.wixsite.com/pittpes/officers"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="award-card"
+                >
+                  <img src="./a2.svg" alt="Phi Eta Sigma Honors Society" />
                   <h3 className="epilogue-semibold">
                     Phi Eta Sigma Honors Society
                   </h3>
-                </div>
+                </a>
               </div>
+
+              {/* Pittsburgh Today Live */}
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                <div className="award-card">
-                  <img src="./a3.svg" alt="Awards" />
+                <a
+                  href="https://www.youtube.com/watch?v=9Fa_gIbHBwk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="award-card"
+                >
+                  <img src="./a3.svg" alt="Pittsburgh Today Live" />
                   <h3 className="epilogue-semibold">Pittsburgh Today Live</h3>
-                </div>
+                </a>
               </div>
+
+              {/* Girls of Steel */}
               <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-3">
-                <div className="award-card">
-                  <img src="./a4.svg" alt="Awards" />
+                <a
+                  href="https://www.cs.cmu.edu/news/2018/girls-steel-bring-home-awards-first-pittsburgh-regional"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="award-card"
+                >
+                  <img src="./a4.svg" alt="Girls of Steel Awards" />
                   <h3 className="epilogue-semibold">Girls of Steel Awards</h3>
-                </div>
+                </a>
               </div>
             </div>
           </div>
