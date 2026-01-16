@@ -1,151 +1,151 @@
 /* Core Flip Setup */
 .flip-card {
-    width: 100%;
-    height: 350px;
-    /* or any fixed height */
-    position: relative;
-    perspective: 1000px;
+  width: 100%;
+  height: 350px;
+  /* or any fixed height */
+  position: relative;
+  perspective: 1000px;
 }
 
 .flip-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
-    transform-style: preserve-3d;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 /* Front and Back sides — now use flex, no more absolute */
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border: 1px solid white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .flip-card-front {
-    z-index: 2;
+  z-index: 2;
 }
 
 .flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* 👈 Keeps aspect ratio nice */
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 👈 Keeps aspect ratio nice */
+  display: block;
 }
 
 .flip-card-back {
-    transform: rotateY(180deg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background-color: #f8f9fa;
-    border-radius: 12px;
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .scrollable-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Text below card */
 /* Text section below the card */
 .project-text {
-    padding-top: 10px;
-    width: 100%;
+  padding-top: 10px;
+  width: 100%;
 }
 
 /* Responsive image container */
 .card-image-wrapper {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 /* Button */
 .project-button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: left;
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
 }
 
 .project-button:hover:enabled {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .project-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 
 .project-card {
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-    margin-bottom: 40px;
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+  margin-bottom: 40px;
 
-    /* 👈 Add space below the entire card block */
+  /* 👈 Add space below the entire card block */
 }
 
 .flip-card-back p {
-    max-width: 90%;
-    margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 @media (max-width: 600px) {
-    .flip-card {
-        width: 80vw;
-        /* Shrink width based on viewport */
-        height: calc(90vw * 0.636);
-        /* Maintain 550x350 aspect ratio */
-        padding: 0 10px;
-        /* Optional: just in case content inside needs space */
-    }
+  .flip-card {
+    width: 80vw;
+    /* Shrink width based on viewport */
+    height: calc(90vw * 0.636);
+    /* Maintain 550x350 aspect ratio */
+    padding: 0 10px;
+    /* Optional: just in case content inside needs space */
+  }
 
-    .flip-card-back {
-        padding: 16px 12px;
-        /* tighter but clean margins on mobile */
-    }
+  .flip-card-back {
+    padding: 16px 12px;
+    /* tighter but clean margins on mobile */
+  }
 
-    .project-text {
-        width: 90vw;
-        padding: 0 10px;
-    }
+  .project-text {
+    width: 90vw;
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 600px) {
-    .project-card {
-        margin-bottom: 60px;
-        /* More breathing room below the button on mobile */
-    }
+  .project-card {
+    margin-bottom: 60px;
+    /* More breathing room below the button on mobile */
+  }
 }
