@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -12,7 +12,7 @@ import ProofpointCaseStudy from "./pages/ProofpointCaseStudy";
 import BikeLinkProCaseStudy from "./pages/BikeLinkProCaseStudy";
 import ClientViewCaseStudy from "./pages/ClientViewCaseStudy";
 /*import CustomCursorKinet from "./components/CustomCursorKinet";*/
-import CustomCursor from "./components/customCursor";
+// import CustomCursor from "./components/customCursor";
 import CustomCursorKinet from "./components/customCursorKinet";
 function App() {
   const [showCustomCursor, setShowCustomCursor] = useState(false);

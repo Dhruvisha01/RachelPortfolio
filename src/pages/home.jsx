@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./home.css";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 import Header from "../components/Header";
 import FlipCardProject from "../components/FlipCardProject";
