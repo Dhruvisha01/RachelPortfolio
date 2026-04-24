@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./home.css";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import Header from "../components/Header";

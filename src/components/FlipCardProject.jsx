@@ -27,7 +27,6 @@ const FlipCardProject = ({
   };
 
   const isCardClickable = !buttonDisabled && Boolean(buttonLink);
-
   useEffect(() => {
     const el = scrollableRef.current;
     if (!el) return;

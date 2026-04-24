@@ -168,6 +168,9 @@ function ClientViewCaseStudy() {
                     caseworkers spend searching through multiple screens.
                   </p>
                 </div>
+                <div className="case-image-visual">
+                  <img src="/DP2A.png" alt="ClientView redesign interface" />
+                </div>
               </div>
             </li>
             <li>

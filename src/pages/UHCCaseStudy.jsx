@@ -27,9 +27,9 @@ function UHCCaseStudy() {
           </h1>
           <p className="epilogue-regular case-subtitle">
             Working alongside University Hospitals of Cleveland, we tackled the
-            challenge of improving at-home patient-administered wound care after Mohs skin cancer surgery.
-            This case study walks through the research, key
-            design decisions, and outcomes.
+            challenge of improving at-home patient-administered wound care after
+            Mohs skin cancer surgery. This case study walks through the
+            research, key design decisions, and outcomes.
           </p>
 
           {/* Section nav */}

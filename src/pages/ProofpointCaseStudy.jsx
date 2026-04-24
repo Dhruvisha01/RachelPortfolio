@@ -207,7 +207,6 @@ function ProofpointCaseStudy() {
               </p>
             </article>
           </div>
-
           <p className="epilogue-regular mt-4">
             <a
               href="https://medium.com/@rachsadeh/phishing-people-to-motivate-them-to-take-the-training-they-need-6d7a7d352b67"

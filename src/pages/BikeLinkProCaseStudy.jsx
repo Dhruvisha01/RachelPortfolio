@@ -91,6 +91,11 @@ function BikeLinkProCaseStudy() {
             that prioritizes safety, usability, and user enjoyment.
           </p>
 
+          {/* Example: Two column image layout */}
+          <div className="case-image-two-col">
+            <img src="/DP1A.png" alt="Physical bike interface design" />
+            <img src="/DP1B.png" alt="Digital companion app interface" />
+          </div>
         </section>
 
         {/* MY ROLE */}
