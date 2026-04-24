@@ -7,6 +7,16 @@
   perspective: 1000px;
 }
 
+.flip-card.is-clickable {
+  cursor: pointer;
+}
+
+.flip-card.is-clickable:focus-visible {
+  outline: 2px solid #7cc2ff;
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
 .flip-card-inner {
   width: 100%;
   height: 100%;

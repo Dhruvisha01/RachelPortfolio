@@ -1,5 +1,6 @@
 // src/pages/ProofpointCaseStudy.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import "../components/caseStudy.css";
 import Header from "../components/Header";
@@ -11,9 +12,9 @@ function ProofpointCaseStudy() {
 
       <main id="main-content" className="container py-5">
         {/* Back link */}
-        <a href="/" className="case-back-link epilogue-regular">
-          ← Back to Home
-        </a>
+        <Link to="/" className="case-back-link epilogue-regular">
+          <span className="case-back-link-arrow">←</span> Back to Home
+        </Link>
 
         {/* HERO SECTION */}
         <header className="case-hero mb-5">
@@ -206,6 +207,18 @@ function ProofpointCaseStudy() {
               </p>
             </article>
           </div>
+
+          <p className="epilogue-regular mt-4">
+            <a
+              href="https://medium.com/@rachsadeh/phishing-people-to-motivate-them-to-take-the-training-they-need-6d7a7d352b67"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="medium-link"
+            >
+              Read more about this project on Medium{" "}
+              <span className="medium-link-arrow">→</span>
+            </a>
+          </p>
         </section>
       </main>
     </div>

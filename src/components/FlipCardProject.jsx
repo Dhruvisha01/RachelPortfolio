@@ -26,6 +26,8 @@ const FlipCardProject = ({
     }
   };
 
+  const isCardClickable = !buttonDisabled && Boolean(buttonLink);
+
   useEffect(() => {
     const el = scrollableRef.current;
     if (!el) return;
@@ -63,7 +65,25 @@ const FlipCardProject = ({
     <div className="col-12 col-lg-4 d-flex justify-content-center">
       <div className="project-card">
         <div className="card-image-wrapper">
-          <div className="flip-card">
+          <div
+            className={`flip-card ${isCardClickable ? "is-clickable" : ""}`}
+            onClick={isCardClickable ? handleClick : undefined}
+            onKeyDown={
+              isCardClickable
+                ? (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      handleClick();
+                    }
+                  }
+                : undefined
+            }
+            role={isCardClickable ? "button" : undefined}
+            tabIndex={isCardClickable ? 0 : undefined}
+            aria-label={
+              isCardClickable ? `Open case study for ${title}` : undefined
+            }
+          >
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <img src={image} alt={title} />

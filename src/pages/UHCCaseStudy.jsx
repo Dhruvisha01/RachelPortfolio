@@ -1,5 +1,6 @@
 // src/pages/UHCCaseStudy.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import "../components/caseStudy.css";
 import Header from "../components/Header";
@@ -11,9 +12,9 @@ function UHCCaseStudy() {
 
       <main id="main-content" className="container py-5">
         {/* Back link */}
-        <a href="/" className="case-back-link epilogue-regular">
-          ← Back to Home
-        </a>
+        <Link to="/" className="case-back-link epilogue-regular">
+          <span className="case-back-link-arrow">←</span> Back to Home
+        </Link>
 
         {/* HERO SECTION */}
         <header className="case-hero mb-5">
@@ -250,6 +251,18 @@ function UHCCaseStudy() {
             <img src="/Cura.png" alt="Final design outcome 1" />
             <img src="/woundCareRedesign.png" alt="Final design outcome 2" />
           </div>
+
+          <p className="epilogue-regular mt-4">
+            <a
+              href="https://medium.com/@rachsadeh/creating-better-at-home-wound-care-experiences-for-surgical-wounds-d65e7af03f7b"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="medium-link"
+            >
+              Read more about this project on Medium{" "}
+              <span className="medium-link-arrow">→</span>
+            </a>
+          </p>
         </section>
       </main>
     </div>

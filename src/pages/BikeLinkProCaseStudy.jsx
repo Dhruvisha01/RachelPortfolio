@@ -1,5 +1,6 @@
 // src/pages/BikeLinkProCaseStudy.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import "../components/caseStudy.css";
 import Header from "../components/Header";
@@ -11,9 +12,9 @@ function BikeLinkProCaseStudy() {
 
       <main id="main-content" className="container py-5">
         {/* Back link */}
-        <a href="/" className="case-back-link epilogue-regular">
-          ← Back to Home
-        </a>
+        <Link to="/" className="case-back-link epilogue-regular">
+          <span className="case-back-link-arrow">←</span> Back to Home
+        </Link>
 
         {/* HERO SECTION */}
         <header className="case-hero mb-5">
@@ -90,11 +91,6 @@ function BikeLinkProCaseStudy() {
             that prioritizes safety, usability, and user enjoyment.
           </p>
 
-          {/* Example: Two column image layout */}
-          <div className="case-image-two-col">
-            <img src="/DP1A.png" alt="Physical bike interface design" />
-            <img src="/DP1B.png" alt="Digital companion app interface" />
-          </div>
         </section>
 
         {/* MY ROLE */}
@@ -218,9 +214,10 @@ function BikeLinkProCaseStudy() {
               href="https://medium.com/@rachsadeh/bikelinkpro-designing-the-future-of-e-bikes-454878311582"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "inherit", textDecoration: "underline" }}
+              className="medium-link"
             >
-              Read more about this project on Medium →
+              Read more about this project on Medium{" "}
+              <span className="medium-link-arrow">→</span>
             </a>
           </p>
         </section>
