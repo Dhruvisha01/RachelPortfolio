@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./home.css";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import Header from "../components/Header";
 import FlipCardProject from "../components/FlipCardProject";
@@ -11,6 +12,30 @@ function Home() {
   const [showBanner, setShowBanner] = useState(false);
   const formRef = useRef(null);
   const topRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const goToSection = (sectionId) => {
+    if (location.pathname === "/") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
+    }
+
+    navigate(`/#${sectionId}`);
+  };
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const sectionId = location.hash.replace("#", "");
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location.hash]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,6 +74,27 @@ function Home() {
     }
   };
 
+  const companyLogos = [
+    { image: "./c1.svg", alt: "VeyTel", href: "https://www.veytel.com" },
+    {
+      image: "./c2.svg",
+      alt: "University Hospitals",
+      href: "https://hcii.cmu.edu/research/mhci-capstone/grid",
+    },
+    {
+      image: "./c3.svg",
+      alt: "Allegheny County Department of Human Services",
+      href: "https://www.proofpoint.com/us/products/mitigate-human-risk",
+    },
+    {
+      image: "./c4.svg",
+      alt: "Giant Eagle",
+      href: "https://www.gianteagle.com",
+    },
+    { image: "./c5.svg", alt: "AXLE Lab", href: "https://axle-lab.com" },
+    { image: "./c6.svg", alt: "Canine Companions", href: "https://canine.org" },
+  ];
+
   return (
     <div className="home">
       <div ref={topRef}></div>
@@ -69,20 +115,19 @@ function Home() {
             {/*  <p className="epilogue-regular">
               Looking to collaborate and exchange some innovative ideas?
             </p> */}
-            <button className="epilogue-semibold btn btn-light connectButton">
-              <a
-                href="/#connect"
-                style={{ color: "#000", textDecoration: "none" }}
-              >
-                Connect with me!
-              </a>
+            <button
+              type="button"
+              className="epilogue-semibold btn btn-light connectButton"
+              onClick={() => goToSection("connect")}
+            >
+              Connect with me!
             </button>
           </div>
           <div className="col-12 col-lg-6 text-center px-4">
             <img
               src="./Rachel Sadeh.JPG"
               alt="hero-img"
-              className="img-fluid"
+              className="img-fluid hero-image"
             />
           </div>
         </div>
@@ -286,36 +331,18 @@ function Home() {
         <div className="project-section px-3 px-md-5">
           <div className="projects-wrapper">
             <div className="row row-cols-2 row-cols-lg-6 gx-4 gy-4 gx-lg-4">
-              <div className="col">
-                <div className="award-card">
-                  <img src="./c1.svg" alt="Awards" />
+              {companyLogos.map((company) => (
+                <div className="col" key={company.image}>
+                  <a
+                    className="award-card"
+                    href={company.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={company.image} alt={company.alt} />
+                  </a>
                 </div>
-              </div>
-              <div className="col">
-                <div className="award-card">
-                  <img src="./c2.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="award-card">
-                  <img src="./c3.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="award-card">
-                  <img src="./c4.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="award-card">
-                  <img src="./c5.svg" alt="Awards" />
-                </div>
-              </div>
-              <div className="col">
-                <div className="award-card">
-                  <img src="./c6.svg" alt="Awards" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

@@ -65,6 +65,10 @@
   background-color: #f0f0f0;
 }
 
+.hero-image {
+  border-radius: 24px;
+}
+
 .work {
   margin-top: 100px;
 }

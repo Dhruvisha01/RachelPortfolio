@@ -1,9 +1,25 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./header.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const resumeHref = `${process.env.PUBLIC_URL}/UX%20Design%20Resume%20Portfolio.pdf`;
+
+  const goToSection = (sectionId) => {
+    setMenuOpen(false);
+    if (location.pathname === "/") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
+    }
+
+    navigate(`/#${sectionId}`);
+  };
 
   return (
     <div className="header">
@@ -14,28 +30,50 @@ export default function Header() {
       </Link>
 
       {/* Hamburger icon */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      <button
+        type="button"
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-expanded={menuOpen}
+        aria-controls="main-nav-links"
+        aria-label="Toggle navigation menu"
+      >
         {menuOpen ? "✖" : "☰"}
-      </div>
+      </button>
 
       {/* Navigation Links */}
-      <div className={`links ${menuOpen ? "open" : ""}`}>
+      <div
+        id="main-nav-links"
+        className={`links ${menuOpen ? "open" : ""}`}
+      >
         <ul>
           <li className="epilogue-regular">
-            <Link to="/about">About</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
           </li>
           <li className="epilogue-regular">
-            <a href="/#work" onClick={() => setMenuOpen(false)}>
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li className="epilogue-regular">
+            <button
+              type="button"
+              className="header-link-button epilogue-regular"
+              onClick={() => goToSection("work")}
+            >
               Work
-            </a>
+            </button>
           </li>
           <li>
             <a
-              href="./UX Design Resume Portfolio.pdf"
+              href={resumeHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download resume"
               className="epilogue-regular"
+              onClick={() => setMenuOpen(false)}
             >
               Resume
             </a>
