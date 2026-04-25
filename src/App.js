@@ -27,8 +27,8 @@ function ScrollToTop() {
   }, []);
 
   useLayoutEffect(() => {
-    // Keep in-page anchor behavior for section links.
-    if (hash) return;
+    // Keep in-page anchor behavior only on Home section links like /#work.
+    if (pathname === "/" && hash) return;
 
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;

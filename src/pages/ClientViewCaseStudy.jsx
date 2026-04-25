@@ -179,7 +179,7 @@ function ClientViewCaseStudy() {
                   </p>
                 </div>
                 <div className="case-image-visual">
-                  <img src="/DP2A.png" alt="ClientView redesign interface" />
+                  <img src="/CV.png" alt="ClientView redesign interface" />
                 </div>
               </div>
             </li>
