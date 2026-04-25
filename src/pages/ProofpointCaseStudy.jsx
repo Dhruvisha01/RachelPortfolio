@@ -1,11 +1,21 @@
 // src/pages/ProofpointCaseStudy.jsx
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import "../components/caseStudy.css";
 import Header from "../components/Header";
 
 function ProofpointCaseStudy() {
+  useLayoutEffect(() => {
+    document.getElementById("main-content")?.scrollIntoView({
+      behavior: "auto",
+      block: "start",
+    });
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
   return (
     <div className="home">
       <Header />

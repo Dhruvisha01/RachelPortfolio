@@ -1,5 +1,5 @@
 // import logo from "./logo.svg";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,11 +18,22 @@ import BikeLinkProCaseStudy from "./pages/BikeLinkProCaseStudy";
 import ClientViewCaseStudy from "./pages/ClientViewCaseStudy";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    // Keep in-page anchor behavior for section links.
+    if (hash) return;
+
     window.scrollTo(0, 0);
-  }, [pathname]);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname, hash]);
 
   return null;
 }

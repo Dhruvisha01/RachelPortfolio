@@ -1,11 +1,21 @@
 // src/pages/UHCCaseStudy.jsx
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
 import "../components/caseStudy.css";
 import Header from "../components/Header";
 
 function UHCCaseStudy() {
+  useLayoutEffect(() => {
+    document.getElementById("main-content")?.scrollIntoView({
+      behavior: "auto",
+      block: "start",
+    });
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
   return (
     <div className="home">
       <Header />
@@ -27,9 +37,9 @@ function UHCCaseStudy() {
           </h1>
           <p className="epilogue-regular case-subtitle">
             Working alongside University Hospitals of Cleveland, we tackled the
-            challenge of improving at-home patient-administered wound care after
-            Mohs skin cancer surgery. This case study walks through the
-            research, key design decisions, and outcomes.
+            challenge of improving at-home patient-administered wound care after Mohs skin cancer surgery.
+            This case study walks through the research, key
+            design decisions, and outcomes.
           </p>
 
           {/* Section nav */}

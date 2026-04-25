@@ -22,6 +22,9 @@ const FlipCardProject = ({
       } else {
         // Internal route - use React Router navigation
         navigate(buttonLink);
+        window.requestAnimationFrame(() => {
+          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        });
       }
     }
   };
