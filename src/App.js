@@ -1,6 +1,11 @@
 // import logo from "./logo.svg";
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 
 // import Header from "./components/Header";
@@ -11,6 +16,17 @@ import TimeToMoveCaseStudy from "./pages/TimeToMoveCaseStudy";
 import ProofpointCaseStudy from "./pages/ProofpointCaseStudy";
 import BikeLinkProCaseStudy from "./pages/BikeLinkProCaseStudy";
 import ClientViewCaseStudy from "./pages/ClientViewCaseStudy";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   useEffect(() => {
     fetch("https://rachelportfoliobackend.onrender.com/")
@@ -20,6 +36,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         {/* <Header /> */}
         <Routes>
