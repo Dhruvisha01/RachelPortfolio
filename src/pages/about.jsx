@@ -57,6 +57,7 @@
 import React from "react";
 import "./about.css";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -107,6 +108,9 @@ function About() {
                 Interested in working together? Visit my connect page to get in
                 touch!
               </p>
+              <Link to="/" className="about-home-button epilogue-semibold">
+                <span className="about-home-button-arrow">←</span> Back to Home
+              </Link>
             </div>
           </div>
         </div>

@@ -5,8 +5,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import Header from "../components/Header";
 import FlipCardProject from "../components/FlipCardProject";
-import PrinciplesCard from "../components/principlesCard";
-import ReviewCard from "../components/ReviewCard";
+import PrinciplesCard from "../components/principlesCard.jsx";
+import ReviewCard from "../components/ReviewCard.jsx";
 
 function Home() {
   const [showBanner, setShowBanner] = useState(false);

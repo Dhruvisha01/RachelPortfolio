@@ -43,6 +43,30 @@
   margin-bottom: 20px;
 }
 
+.about-home-button {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.about-home-button-arrow {
+  display: inline-block;
+  margin-right: 4px;
+  transition: transform 0.2s ease;
+}
+
+.about-home-button:hover {
+  opacity: 1;
+  color: #7cc2ff;
+}
+
+.about-home-button:hover .about-home-button-arrow {
+  transform: translateX(-4px);
+}
+
 .about-page .sticky {
   position: sticky;
   top: 100px;
