@@ -63,6 +63,14 @@ function About() {
   return (
     <>
       <Header />
+      <main id="main-content" className="container py-5">
+        <div className="about-page">
+          {/* content */}
+          <Link to="/" className="about-home-button epilogue-semibold">
+            <span className="about-home-button-arrow">←</span> Back to Home
+          </Link>
+        </div>
+      </main>
       <div className="about-page">
         <div className="container py-5">
           {/* Heading should be here */}
